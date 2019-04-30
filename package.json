@@ -1,0 +1,22 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "author": "Florian Robert",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --progress --env.development --env.nodemon",
+    "start:prod": "webpack --progress --env.nodemon",
+    "build": "webpack --progress --env.development",
+    "build:prod": "webpack --progress",
+    "build:ci": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.0.0",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "ts-loader": "^5.4.4",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
