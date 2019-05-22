@@ -2,7 +2,7 @@
 const NodemonPlugin = require('nodemon-webpack-plugin');
 module.exports = (env = {}) => {
   const config = {
-    entry: ['./main.ts'],
+    entry: ['./src/main.ts'],
     mode: env.development ? 'development' : 'production',
     target: 'node',
     devtool: env.development ? 'cheap-eval-source-map' : false,
