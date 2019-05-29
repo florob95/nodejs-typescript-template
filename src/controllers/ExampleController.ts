@@ -1,12 +1,14 @@
 import { Body, Delete, Get, JsonController, Param, Post, Put } from 'routing-controllers';
+import { ExampleService } from '../services/ExampleService';
 
 @JsonController('/examples')
 export class ExampleController {
 
+  constructor(private exampleService: ExampleService) {}
+
   @Get()
   getAll() {
-    console.log('ntm');
-    return 'This action returns all examples';
+    return this.exampleService.findAll();
   }
 
   @Get('/:id')
