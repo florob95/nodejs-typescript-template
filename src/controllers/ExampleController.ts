@@ -15,9 +15,8 @@ import { ExampleService } from '../services/ExampleService';
 @JsonController('/examples')
 export class ExampleController extends BaseController{
 
-
   constructor(private exampleService: ExampleService) {
-    super()
+    super();
   }
 
   @Get()
