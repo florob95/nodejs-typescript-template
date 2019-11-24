@@ -1,17 +1,33 @@
-import { Body, Delete, Get, JsonController, Param, Post, Put } from 'routing-controllers';
+import {
+  Body,
+  Delete,
+  Get,
+  HttpCode,
+  JsonController,
+  OnUndefined,
+  Param,
+  Post,
+  Put,
+} from 'routing-controllers';
+import { BaseController } from './BaseController';
 import { ExampleService } from '../services/ExampleService';
 
 @JsonController('/examples')
-export class ExampleController {
+export class ExampleController extends BaseController{
 
-  constructor(private exampleService: ExampleService) {}
+
+  constructor(private exampleService: ExampleService) {
+    super()
+  }
 
   @Get()
+  @HttpCode(200)
   getAll() {
     return this.exampleService.findAll();
   }
 
   @Get('/:id')
+  @OnUndefined(404)
   getOne(@Param('id') id: number) {
     return `This action returns example # ${id}`;
   }
