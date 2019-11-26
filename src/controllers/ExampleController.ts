@@ -8,7 +8,7 @@ import {
   Param,
   Post,
   Put,
-} from 'routing-controllers';
+} from '@florob95/routing-controllers-services';
 import { BaseController } from './BaseController';
 import { ExampleService } from '../services/ExampleService';
 

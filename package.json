@@ -17,13 +17,13 @@
     "fix": "tslint --project . --fix"
   },
   "dependencies": {
+    "@florob95/routing-controllers-services": "0.0.1",
     "body-parser": "^1.19.0",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.11.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "multer": "^1.4.1",
-    "reflect-metadata": "^0.1.13",
-    "routing-controllers": "^0.7.7",
-    "typedi": "^0.8.0"
+    "multer": "^1.4.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",

@@ -1,16 +1,14 @@
-import 'reflect-metadata';
-import { createExpressServer, useContainer } from 'routing-controllers';
 import { Request, Response } from 'express';
 import { ExampleController } from './controllers/ExampleController';
-import { Container } from 'typedi/Container';
-
-useContainer(Container);
+import { createExpressServer } from '@florob95/routing-controllers-services';
+import { ExampleService } from './services/ExampleService';
 
 const app = createExpressServer({
   cors: {
     origin: '*',
   },
   controllers: [ExampleController],
+  services: [ExampleService]
 });
 
 app.get('/', (req: Request, res: Response) => {
