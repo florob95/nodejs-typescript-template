@@ -3,7 +3,10 @@ const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 module.exports = (env = {}) => {
   const config = {
-    entry: ['./src/main.ts'],
+    entry: ['./src/index.ts'],
+    output: {
+      filename: 'index.js',
+    },
     mode: env.development ? 'development' : 'production',
     target: 'node',
     externals: [nodeExternals()],
