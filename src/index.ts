@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { ExampleController } from './controllers/ExampleController';
 import { createExpressServer } from '@florob95/routing-controllers-services';
 import { ExampleService } from './services/ExampleService';
+import 'dotenv/config';
 
 const app = createExpressServer({
   cors: {
