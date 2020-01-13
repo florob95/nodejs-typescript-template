@@ -2,7 +2,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "target": "esnext",
+    "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "lib": ["dom", "es2018"],
@@ -12,6 +12,12 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "strict": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": false,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
     "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules"],
